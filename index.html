@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intrinio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <!-- Include Required Prerequisites -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway+Dots" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <div class="ticker__item">Dow 21,479.27 (129.64) 0.61%</div>
+        <div class="ticker__item">S&P 500 2,429.01 (5.60) 0.23%</div>
+        <div class="ticker__item">Nasdaq 6,110.06 (-30.36) -0.49%</div>
+        <div class="ticker__item">GlobalDow 2,783.90 (-0.14) -0.28</div>
+        <div class="ticker__item">Gold 1,223.70 (4.50) 0.37%</div>
+        <div class="ticker__item">Oil 46.83 -(0.24) -0.51%</div>
+        <div class="ticker__item">Dow 21,479.27 (129.64) 0.61%</div>
+        <div class="ticker__item">S&P 500 2,429.01 (5.60) 0.23%</div>
+        <div class="ticker__item">Nasdaq 6,110.06 (-30.36) -0.49%</div>
+        <div class="ticker__item">GlobalDow 2,783.90 (-0.14) -0.28</div>
+        <div class="ticker__item">Gold 1,223.70 (4.50) 0.37%</div>
+        <div class="ticker__item">Oil 46.83 -(0.24) -0.51%</div>
+      </div>
+    </div>
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-m-5"></div>
+        <div class="col-m-2">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <img class="img-responsive" src="assets/guppyLogo" id="logo" alt="guppy logo">
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <h2 class="slogan">chatter sentiment analysis</h2>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+        <div class="col-m-5"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-m-2"></div>
+        <div class="col-m-4">
+          <h2 class="searchTxt">search ticker symbol</h2>
+          <div id="custom-search-input">
+            <div class="input-group">
+              <input type="text" class="form-control input-lg" placeholder="Search" />
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-m-4">
+          <h2 class="searchTxt">date range</h2>
+          <div id="reportrange" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+            <span></span> <b class="caret"></b>
+          </div>
+        </div>
+        <div class="col-m-2"></div>
+      </div>
+    </div>
+    <div class="charts"></div>
+  </div>
+  <div class="row">
+    <div class="container1 col-m-12">
+      <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="assets/graphIcon.png" alt="graph icon" class="img-rounded img-responsive center-block icons">
+              <p class="iconParagraphs">quantify media trends</p>
+            </div>
+            <div class="col-md-4">
+              <img src="assets/eyeIcon.png" alt="graph icon" class="img-rounded img-responsive center-block icons">
+              <p class="iconParagraphs iconAdjust">consume more data</p>
+            </div>
+            <div class="col-md-4">
+              <img src="assets/alertIcon.png" alt="graph icon" class="img-rounded img-responsive center-block icons">
+              <p class="iconParagraphs iconAdjust2">get live notifications</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="iconP">Sentiment analysis is the process of computationally identifying and categorizing opinions expressed in a piece of text, especially in order to determine whether the writer's attitude towards a particular topic, product, etc., is positive,
+                negative, or neutral.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <a href="chatter.html"><div id="chatterButton" class="btn btn-danger">CHATTER NEWS</div></a>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p id="footerTxt">© banana trust 2017</p>
+  </footer>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/tether.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript">
+    //////////////////GLOBAL VARIABLES/////////////////////////////
+    var startDate = '';
+    var endDate = '';
+    var myLineChart1 = null;
+    var myLineChart2 = null;
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+    var ctx1 = null;
+    var ctx2 = null;
+    var companyName = '';
+
+    ///////////////DSIPLAY DATE RANGE FROM DATE PICKER/////////////
+    function displayedDateRange(start, end) {
+      $('#reportrange span').html(start._d.toISOString().substring(0, 10) + ' - ' + end._d.toISOString().substring(0, 10));
+      startDate = start._d.toISOString().substring(0, 10);
+      endDate = end._d.toISOString().substring(0, 10);
+    }
+
+    ///////////GET DATE RANGE FROM DATE PICKER/////////////////////
+    $(function getDateRangeFromDatePicker() {
+      $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          //'This Month': [moment().startOf('month'), moment().endOf('month')],
+          // 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+      }, displayedDateRange);
+      displayedDateRange(start, end);
+    });
+
+    ////////ON BUTTON CLICK, DO THE FOLLOWING...///////////////////
+    $(".btn-lg").click(function() {
+
+      $('.charts').html(
+        "<!-- This main panel will hold each of the resulting articles --><div class='panel-body' id='wellSection'></div><!-- /Start your project here--><h2 id='stock-label'></h2><canvas id='myChart1' height='70px'></canvas><h2 id='sentiment-label'></h2><canvas id='myChart2' height='70px'></canvas>"
+      );
+      $('.container1').addClass('marginTop');
+      if (myLineChart1 != null) {
+        myLineChart1.destroy();
+      }
+      if (myLineChart2 != null) {
+        myLineChart2.destroy();
+      }
+      var stockDataset = [];
+      var stockDateRange = [];
+      var newsDataset = [];
+      var newsDateRange = [];
+      var unixDate = '';
+      var username = "ae51b34b03f8f8addfc74efe258e8d2d";
+      var password = "1c2b76215ff2f8f0b78cd3fa13a463c3";
+      var auth = "Basic " + (username + ':' + password).toString('base64');
+      var searchTicker = $('.input-lg').val();
+
+      ////////GET STOCK FEED AND COMPANY INFO FROM INTRINIO.COM//////
+      var stockQueryURL = "https://api.intrinio.com/historical_data?ticker=" + searchTicker.toUpperCase() + "&item=close_price&start_date=" + startDate + "&end_date=" + endDate;
+      $.ajax({
+        beforeSend: function(request) {
+          request.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
+        },
+        url: stockQueryURL,
+        method: "GET"
+      }).done(function(stockResponse) {
+        for (var i = stockResponse.data.length - 1; i > 0; i--) {
+          stockDataset.push(stockResponse.data[i].value);
+          stockDateRange.push(stockResponse.data[i].date);
+        }
+        displayChartWithStockPrices(stockDataset, stockDateRange);
+        /////////////////DISPLAY COMPANY INFO//////////////////////////
+        var companyQueryURL = "https://api.intrinio.com/companies?ticker=" + searchTicker.toUpperCase();
+        $.ajax({
+          beforeSend: function(request) {
+            request.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
+          },
+          url: companyQueryURL,
+          method: "GET"
+        }).done(function(companyResponse) {
+          companyName = companyResponse.name.split(' ')[0];
+
+          // Empties the region associated with the articles
+          $("#wellSection").empty();
+          var wellSection = $("<div>");
+          wellSection.addClass('well');
+          wellSection.attr('id', 'articleWell');
+          $('#wellSection').append(wellSection);
+
+          // Then display the remaining fields in the HTML (Section Name, Date, URL)
+          $("#articleWell").append('<h5>Company: ' + companyResponse.name + "</h5>");
+          $("#articleWell").append('<h5>CEO: ' + companyResponse.ceo + "</h5>");
+          $("#articleWell").append('<h5>Symbol: ' + companyResponse.ticker + "</h5>");
+          $("#articleWell").append('<h5>Exchange: ' + companyResponse.stock_exchange + "</h5>");
+          $("#articleWell").append('<h5>Address: ' + companyResponse.business_address + "</h5>");
+          $("#articleWell").append('<h5>Website: ' + companyResponse.company_url + "</h5>");
+          retrieveNewsFeed(companyName);
+        });
+
+        //////////////START OF SENTIMENT FUNCTIONS///////////////////////
+        var temp = 0;
+        var x = '';
+        var temp1 = '';
+        var dataList;
+        var tempCount = 0;
+        var countArr = [];
+        var countArrays = [];
+        var addedCountArrays = [];
+        //MASTER FUNCTION THAT TIES IT ALL TOGETHER (SHOULD TAKE IN ARTICLES ARRAY)
+        function parse(parsedArticles, newsDateRange) {
+          jQuery.get('assets/AFINN-111.txt', function(txt) {}).done(function(txt) {
+            dataList = parseData(txt);
+            dictionary = parseData2(dataList);
+            // database.ref().push({
+            //   dictionary: dictionary,
+            // });
+            for (var z = 0; z < parsedArticles.length; z++) {
+              countArr[z] = 0;
+              for (var l = 0; l < parsedArticles[z].length; l++) {
+                if (dictionary[0].includes(parsedArticles[z][l])) {
+                  var index = dictionary[0].indexOf(parsedArticles[z][l]);
+                  countArr[z] = (parseInt(dictionary[1][index]) + countArr[z]);
+                }
+              }
+            }
+            //RUN SENTIMENT GRAPH FROM HERE!!! SUBSTITUTE FOR C LOG
+            //console.log(countArr.length);
+            displayChartWithSentiment(countArr, newsDateRange);
+          });
+        }
+        var score = false;
+        var words = [];
+        var scores = [];
+        var tempScore = '';
+        var tempWord = '';
+        //MAKING TWO SEPARATE ARRAYS FOR WORDS AND SCORES
+        function parseData2(dL) {
+          var twoArr = [];
+          for (var j = 0; j < dL.length; j++) {
+            for (var f = 0; f < dL[j].length - 1; f++) {
+              if (f < (dL[j].length - 3)) {
+                if (dL[j][f] !== '	') {
+                  tempWord = tempWord + dL[j][f];
+                }
+              } else {
+                if (dL[j][f] !== '	') {
+                  tempScore = tempScore + dL[j][f];
+                }
+              }
+            }
+            scores.push(tempScore);
+            tempScore = '';
+            words.push(tempWord);
+            tempWord = '';
+          }
+          var dictionary = [];
+          dictionary.push(words);
+          dictionary.push(scores);
+          return dictionary;
+        }
+        //MAKING ARRAY OUT OF TXT DOC
+        function parseData(data) {
+          var arr = [];
+          for (var i = 0; i < data.length; i++) {
+            if (data[i] === '\n') {
+              for (var y = temp; y <= i; y++) {
+                var x = data[y];
+                temp1 = temp1 + x;
+              }
+              arr.push(temp1);
+              temp = (i + 1);
+              temp1 = '';
+            }
+          }
+          return arr;
+        }
+        //TURNING ARTICLES TO ARRAYS OF WORDS
+        var tempArticle;
+        var parsedArticles = [];
+
+        function arraying(newsArr) {
+          for (var t = 0; t < newsArr.length; t++) {
+            var tempArticle = newsArr[t].split(/[ ,."'↵]+/);
+            parsedArticles.push(tempArticle);
+            for (var b = 0; b < tempArticle.length; b++) {
+              tempArticle[b] = (tempArticle[b]).toLowerCase();
+            }
+          }
+          //console.log(parsedArticles.length);
+          return parsedArticles;
+        }
+        ///////////////END OF SENTIMENT FUNCTIONS///////////////////////
+
+        //////////////////GET NEWS FEED FROM WEBHOSE.IO////////////////
+        var newsArray = [];
+        var datesArray = [];
+
+        function retrieveNewsFeed(companyName) {
+          var dateInput = startDate;
+          //console.log(dateInput);
+          var unixDate = moment(new Date(dateInput)).unix();
+          unixDate = unixDate * 1000;
+          var unixDate1 = (unixDate).toString();
+          var placeholder = companyName.toLowerCase();
+          console.log(placeholder);
+          var queryURL1 = "https://webhose.io/filterWebContent?token=5d28a272-01c1-4d26-aee0-8598cb76ae9a&format=json&ts=" + unixDate1 + "&sort=published&q=language%3Aenglish%20site%3Awsj.com%20organization%3A" + placeholder;
+          var queryURL = queryURL1;
+          $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).done(function(NewsData) {
+            for (var i = NewsData.posts.length - 1; i > 0; i--) {
+              var tempDate = NewsData.posts[i].published;
+              datesArray.push(tempDate.substr(0, 10));
+            }
+            for (var i = NewsData.posts.length - 1; i > 0; i--) {
+              var tempTxt = NewsData.posts[i].text;
+              newsArray.push(tempTxt);
+            }
+            //PASSING ARTICLES TO FUNCTIONS
+            console.log(datesArray);
+            console.log(newsArray);
+            parsedArticles = arraying(newsArray);
+            parse(parsedArticles, datesArray);
+          });
+        }
+        //////////////////DISPLAY CHART WITH NEWS SENTIMENT////////////
+        function displayChartWithSentiment(newsDataset, newsDateRange) {
+          $("#sentiment-label").html("Sentiment");
+          var data2 = {
+            labels: newsDateRange,
+            datasets: [{
+              label: "My Second dataset",
+              fillColor: "rgba(151,187,205,0.2)",
+              strokeColor: "rgba(151,187,205,1)",
+              pointColor: "rgba(151,187,205,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(151,187,205,1)",
+              data: newsDataset
+            }]
+          };
+          var option = {
+            responsive: true,
+          };
+          // Get the context of the canvas element we want to select
+          ctx2 = document.getElementById("myChart2").getContext('2d');
+          myLineChart2 = new Chart(ctx2).Line(data2, option); //'Line' defines type of the chart.
+        }
+
+        //////////////////DISPLAY CHART WITH STOCK PRICES//////////////
+        function displayChartWithStockPrices(stockDataset, stockDateRange) {
+          $("#stock-label").html("Stock");
+          //console.log(stockDateRange);
+          var data1 = {
+            labels: stockDateRange,
+            datasets: [{
+              label: "My First dataset",
+              fillColor: "rgba(220,220,220,0.2)",
+              strokeColor: "rgba(220,220,220,1)",
+              pointColor: "rgba(220,220,220,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(220,220,220,1)",
+              data: stockDataset
+            }]
+          };
+          var option = {
+            responsive: true,
+          };
+          // Get the context of the canvas element we want to select
+          ctx1 = document.getElementById("myChart1").getContext('2d');
+          myLineChart1 = new Chart(ctx1).Line(data1, option); //'Line' defines type of the chart.
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

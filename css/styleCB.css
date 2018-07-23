@@ -1,0 +1,37 @@
+.header{
+	font-size: 48px;
+	color: #99CCFF;
+	text-align: right;
+	font-family: helvetica;
+   text-align: center;
+}
+
+.news{
+
+	font-family: helvetica;
+}
+
+.logo{
+    margin-top: 24px;
+    display: block;
+    height: 100px;
+
+
+    margin-left: 42%;
+}
+
+button {
+    font-family: helvetica;
+    letter-spacing: 1px;
+    background: none;
+    color: black;
+    position: relative;
+    outline: none;
+    border: black 1px;
+    height: 50px;
+    width: 190px;
+    font-size: 18px;
+    z-index: 2;
+    transition: .01s .23s ease-out all;
+    overflow: hidden;
+}

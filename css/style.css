@@ -1,0 +1,254 @@
+/* CUSTOM STYLES */
+body {
+  background-image: url("../assets/bluePattern.jpg");
+  padding-bottom: 0;
+}
+
+.jumbotron {
+  background-color: transparent !important;
+  margin-top: -20px;
+}
+
+.slogan {
+  font-size: 2em;
+  color: rgba(86, 160, 201, 0.5);
+  text-align: center;
+  margin-top: -7px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.searchTxt {
+  color: rgb(50, 70, 82);
+  font-size: 1.7em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container1 {
+  background-color: rgb(58, 114, 199);
+  height: 620px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#footerTxt {
+  text-align: center;
+  color: rgb(114, 122, 126);
+  color: rgba(114, 122, 126, 0.5);
+  margin-top: 17px;
+  margin-bottom: -40px;
+}
+
+.charts {
+  margin-bottom: 40px;
+}
+
+.panel-body {
+  margin-top: 30px;
+}
+
+.marginTop {
+  margin-top: 0;
+}
+
+.icons {
+  padding: 100px;
+  margin-top: 40px;
+}
+
+.iconParagraphs {
+  color: white;
+  margin-top: -100px;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.iconP {
+  color: white;
+  text-align: center;
+  margin-top: 95px;
+  font-size: 1.3em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.iconAdjust {
+  margin-top: -75px;
+}
+
+.iconAdjust2 {
+  margin-top: -88px;
+}
+
+.searchTxt {
+  padding: 0;
+}
+
+#chatterButton {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 25px;
+}
+
+#chatterButton:hover {
+  background-color: rgba(206, 66, 244, 0.2);
+  color: white;
+  margin-top: 25px;
+}
+
+#chatterButton:active {
+  background-color: rgba(206, 66, 244, 0.1);
+  opacity: .4;
+  margin-top: 25px;
+}
+
+
+
+/*ticker css starts HERE*/
+
+
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.ticker-wrap {
+  /*position: fixed;*/
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  /*background-color: rgba(0, 0, 0, 0.9);*/
+  padding-left: 40%;
+}
+
+.ticker {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  padding-left: 60%;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 30;
+  animation-duration: 30s;
+}
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: rgba(39, 123, 222, 0.6);
+  font-family: 'Raleway Dots', cursive;
+}
+
+body {
+  padding-bottom: 5rem;
+}
+
+h1, h2, p {
+  padding: 0 5%;
+}
+
+/*responsive edits after this*/
+
+@media screen and (max-width: 1200px) {
+  .container1 {
+    height: 590px;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  .container1 {
+    height: 680px;
+  }
+
+
+  .iconParagraphs {
+    color: white;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .iconAdjust {
+    margin-top: 25px;
+  }
+
+  .iconAdjust2 {
+    margin-top: 7px;
+  }
+
+  .icons {
+    padding: 20px;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .icons {
+    padding: 100px;
+    margin-top: 40px;
+  }
+
+  .container1 {
+    height: 1800px;
+  }
+
+  .iconParagraphs {
+    color: white;
+    margin-top: -100px;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .iconAdjust {
+    margin-top: -75px;
+  }
+
+  .iconAdjust2 {
+    margin-top: -88px;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .container1 {
+    height: 1800px;
+  }
+
+}
+
+@media screen and (max-width: 570px) {
+
+  .container1 {
+    height: 1980px;
+  }
+
+}
